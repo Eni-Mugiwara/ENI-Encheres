@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ArticleVendu  {
-	
+	private static final long serialVersionUID = 1L;
 	
 	private int no_article;
 	private String nom_article;	
