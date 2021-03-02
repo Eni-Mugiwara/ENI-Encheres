@@ -28,5 +28,9 @@ public class Encheres {
 		argMap.put("no_article", no_article);
 		return argMap;
 	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
 }
