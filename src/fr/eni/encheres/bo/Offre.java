@@ -1,4 +1,4 @@
-package fr.eni.encheres.bll;
+package fr.eni.encheres.bo;
 
 public class Offre {
 	ArticlesVendus articles_vendus;

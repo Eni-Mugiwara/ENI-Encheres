@@ -1,4 +1,4 @@
-package fr.eni.encheres.bll;
+package fr.eni.encheres.bo;
 
 import java.util.HashMap;
 import java.util.Map;
