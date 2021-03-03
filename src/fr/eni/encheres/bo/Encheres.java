@@ -1,4 +1,4 @@
-package fr.eni.encheres.bll;
+package fr.eni.encheres.bo;
 
 
 import java.util.HashMap;
@@ -27,6 +27,10 @@ public class Encheres {
 		argMap.put("montant_enchere", montant_enchere);
 		argMap.put("no_article", no_article);
 		return argMap;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
 }

@@ -1,9 +1,9 @@
-package fr.eni.encheres.bll;
+package fr.eni.encheres.bo;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ArticleVendu  {
+public class ArticlesVendus  {
 	private static final long serialVersionUID = 1L;
 	
 	private int no_article;
@@ -17,8 +17,7 @@ public class ArticleVendu  {
 	private int no_categorie;
 	private String image_path;
 	
-	
-	public ArticleVendu(String nom_article, String description, String date_debut_encheres, String date_fin_encheres,
+	public ArticlesVendus(String nom_article, String description, String date_debut_encheres, String date_fin_encheres,
 			int prix_initial, int prix_vente, int no_utilisateur, int no_categorie) {
 		super();
 		this.nom_article = nom_article;
@@ -113,6 +112,11 @@ public class ArticleVendu  {
 
 	public int getNo_categorie() {
 		return no_categorie;
+	}
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
 }
