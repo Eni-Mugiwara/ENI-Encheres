@@ -36,10 +36,10 @@ public class ConnexionServlet extends HttpServlet {
 		String motDePasse = request.getParameter("motDePasse");
 		String id = request.getParameter("id");
 		
-		//reset à zéro si pas de session ouverte
+		//reset a zero si il n'y a pas de sessions ouvertes
 		if( pseudo == null) pseudo = "";
 		if( motDePasse == null) motDePasse = "";
-		//contrôle de la session 
+		//controle de la session 
 		HttpSession session = request.getSession( true );
 		session.setAttribute("pseudo", pseudo);
 		session.setAttribute("motDePasse", motDePasse);
@@ -52,22 +52,22 @@ public class ConnexionServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			//création de la session
+			//creation de la session
 			HttpSession session = request.getSession();
 		try {
-			//récupération de la liste des utilisateurs en bdd et de la saisie des inputs sur la page de connexion
+			//recuperation de la liste des utilisateurs en bdd et de la saisie des inputs sur la page de connexion
 			List<Utilisateur> listeDutilisateur = mgr.getAllUtilisateur();
 			
-			String erreur = "t'as fait une faute d'orthographe";
+			String erreur = "Tu as fait une faute d'orthographe";
 			String pseudo = ConnexionForm.validateInput(request.getParameter("pseudo").trim(), erreur ) ;
 			String mdp = request.getParameter("mdp").trim();
 
 			
-			//vérification du mot de passe
+			//verification du mot de passe
 			ConnexionForm.regStringValeur( mdp, "mdp");
 			
-			//vérif de la saisie utilisateur si pseudo est un mail ou un pseudo
-			//e t filtre la saisie pour la stocker dans le pseudo
+			//verif de la saisie utilisateur si pseudo est un mail ou un pseudo
+			// et filtrer la saisie pour la stocker dans le pseudo
 			if (pseudo.matches(EMAIL_PATTERN)) {
 			String email = null;
 			 email = (String) request.getParameter("pseudo");
@@ -75,7 +75,7 @@ public class ConnexionServlet extends HttpServlet {
 		
 			String  mdp1 = ConnexionForm.hashMdp(mdp);
 
-			//filtre de recherche si pseudo ou si email existe dans la bdd et si ceux ci-correspondent au mot de passe enregistré en bdd
+			//filtre de recherche si pseudo ou si email existe dans la bdd et si ceux ci-correspondent au mot de passe enregistrer  en bdd
 			Utilisateur utilisateurConfirmeBDD = 
 				listeDutilisateur.stream().filter(
 			u -> (u.getPseudo().contains(pseudo) || u.getEmail().contains(pseudo))  && u.getMotDePasse().contains(mdp1)) 
