@@ -1,10 +1,9 @@
 package fr.eni.encheres.ihm;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +14,6 @@ import fr.eni.encheres.bll.ArticleManager;
 import fr.eni.encheres.bll.BLLException;
 import fr.eni.encheres.bll.UtilisateurManager;
 import fr.eni.encheres.bo.Article;
-import fr.eni.encheres.bo.Categorie;
 import fr.eni.encheres.bo.Utilisateur;
 import fr.eni.encheres.ihm.model.ConnexionForm;
 
@@ -59,7 +57,7 @@ public class AccueilServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String articleRecherche = request.getParameter("barreRechercheArticle");
 		int categorieSelectionee = Integer.parseInt(request.getParameter("selectCategorie"));
-		//contrôle des saisie
+		//contrï¿½le des saisie
 		ConnexionForm.validateInput(articleRecherche, erreur );
 		
 		List<Article> listeArticle;

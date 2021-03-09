@@ -20,7 +20,6 @@ public class ArticleManager {
 <<<<<<< HEAD
 	
 =======
-	 * @author SoGutta
 >>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @return List<Article>
 	 * @throws BLLException
@@ -46,7 +45,6 @@ public class ArticleManager {
 	 * m�thode d'insertion d'article en bdd
 =======
 	 * méthode d'insertion d'article en bdd
-	 * @author SoGutta
 >>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @throws BLLException 
 	 * @throws SQLException 
@@ -65,7 +63,6 @@ public class ArticleManager {
 	/**
 <<<<<<< HEAD
 =======
-	 * @author SoGutta
 >>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @return List<Categorie>
 	 * @throws BLLException
@@ -93,7 +90,6 @@ public class ArticleManager {
 	/**
 <<<<<<< HEAD
 =======
-	 * @author SoGutta
 >>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @return List<Article>
 	 * @throws BLLException

@@ -1,6 +1,7 @@
 package fr.eni.encheres.dal;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,13 +13,12 @@ import java.util.List;
 import fr.eni.encheres.bll.BLLException;
 import fr.eni.encheres.bo.Article;
 import fr.eni.encheres.bo.Categorie;
-import fr.eni.encheres.bo.Retrait;
 
 
 public class ArticleDAOImpl implements ArticleDAO {
 
 	/**
-	 * Attributs de classe des requêtes sql
+	 * Attributs de classe des requï¿½tes sql
 	 */
 
 	private static final String SQL_SELECT_ALL_ARTICLES = "SELECT no_article, nom_article, description, date_debut_encheres,"
@@ -49,11 +49,10 @@ public class ArticleDAOImpl implements ArticleDAO {
 //	private static final String SQL_FILTRE_CATEGORIE_AND = " AND A.no_categorie = ?";
 	
 	 /**
-	 * @author tanguy
 
 	 * @return List<Article>
 	 * @throws DALException
-	 * Selectionne les articles avec les paramètres utilisateurId & categorieId
+	 * Selectionne les articles avec les paramï¿½tres utilisateurId & categorieId
 	 */
 	public List<Article> SelectAllArticlesAvecUtilisateurEtCategorie(int utilisateurId, int categorieId) throws DALException {
 		List<Article> listeArticles = new ArrayList<Article>();
@@ -101,8 +100,7 @@ public class ArticleDAOImpl implements ArticleDAO {
 		return listArticles;
 	}
 	/**
-	 * Auteur tanguy
-	 * méthode d'insertion d'un objet en bdd
+	 * mï¿½thode d'insertion d'un objet en bdd
 	 * @throws SQLException 
 	 * @throws DALException 
 	 */
@@ -129,7 +127,7 @@ public class ArticleDAOImpl implements ArticleDAO {
 					article.setMiseAPrix(rs.getInt("prix_initial")), article.setPrixVente(rs.getInt("prix_vente")), article.setEtatVente(rs.getInt("etatVente")), utilisateurId,
 					categorieID);
  */	
-//  préparation pour requête SelectBY ou Update
+//  prï¿½paration pour requï¿½te SelectBY ou Update
 //		ResultSet rs = pstmt.getGeneratedKeys();
 //		if (rs.next()) {
 //	
@@ -153,10 +151,10 @@ public class ArticleDAOImpl implements ArticleDAO {
 
 	
 	/**
-	 * @author Samy-Lee
+
 	 * @return List<Categorie>
 	 * @throws BLLException
-	 * Selectionne toutes les catégories
+	 * Selectionne toutes les catï¿½gories
 	 */
 	public List<Categorie> SelectAllCategories() throws DALException {
 		List<Categorie> listeCategorie = new ArrayList<Categorie>();
@@ -181,7 +179,7 @@ public class ArticleDAOImpl implements ArticleDAO {
 	
 	/**
 	 * Selectionne tout les articles
-	 * @author Samy-Lee
+
 	 * @return List<Article>
 	 * @throws DALException
 	 */

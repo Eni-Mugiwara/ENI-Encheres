@@ -40,7 +40,6 @@ public class UtilisateurManager {
 	/**
 <<<<<<< HEAD
 =======
-	 * @author SoGutta
 >>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @param id
 	 * @return Utilisateur

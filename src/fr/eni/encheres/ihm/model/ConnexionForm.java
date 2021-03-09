@@ -14,17 +14,16 @@ import fr.eni.encheres.bo.Utilisateur;
 
 public interface ConnexionForm {
 
-	static final String REGEXGENERAL = "^[\\w\\séèêàâùç-]{3,}$";
+	static final String REGEXGENERAL = "^[\\w\\sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-]{3,}$";
 	static final String REGEXEMAIL = "^[\\w.-]+@[\\w.-]+\\.[a-z]{2,}$";
 	static final String REGEXTEL = "^[0-9]{10}$";
 	static final String REGEXPOST = "^[0-9]{5}$";
 	static final String REGEXPASSWORD = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[$/.,-_!]).{8,15}$";
-	//static final String REGEXInput = "^[-\\w\\séèêàâùç]$";
+	//static final String REGEXInput = "^[-\\w\\sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]$";
 
 	/*
-	 * @Author : Tanguy & Valentin
 	 * @References : https://www.lucaswillems.com/fr/articles/25/tutoriel-pour-maitriser-les-expressions-regulieres
-	 * @Param : la nom et la valeur d'un parametre de requête
+	 * @Param : la nom et la valeur d'un parametre de requï¿½te
 	 * 
 	 * @Return : String de message d'Ã©rreur
 	 */
@@ -65,7 +64,7 @@ public interface ConnexionForm {
 		case "telephone":
 			regex = REGEXTEL;
 			if (!valeurParametre.matches(regex)) {
-				message = messageErreur + " un numéro de téléphone valide";
+				message = messageErreur + " un numï¿½ro de tï¿½lï¿½phone valide";
 			}
 			break;
 
@@ -94,8 +93,8 @@ public interface ConnexionForm {
 			regex = REGEXPASSWORD;
 			if(!valeurParametre.matches(regex)) {
 				message = messageErreur + " un Mot de Passe contenant entre 8 et 15 "
-						+ "charactères dont une minuscule, une majuscule et un charactère"
-						+ " spécial parmis : $/.,-_!";
+						+ "charactï¿½res dont une minuscule, une majuscule et un charactï¿½re"
+						+ " spï¿½cial parmis : $/.,-_!";
 			}
 			break;
 		}
@@ -103,13 +102,12 @@ public interface ConnexionForm {
 	}
 
 	/*
-	 * @Auhtor : Valentin
 	 * 
 	 * Desc : Ajout d'attribut contenant les possibles messages d'erreurs &
-	 * vérification des données rentrées dans le formulaire
+	 * vï¿½rification des donnï¿½es rentrï¿½es dans le formulaire
 	 * 
-	 * @Param : Requete d'une Servlet & la liste en String des entrées du formulaire
-	 * 			la liste doit suivre le même ordre que celui du constructeur Utilisateur
+	 * @Param : Requete d'une Servlet & la liste en String des entrï¿½es du formulaire
+	 * 			la liste doit suivre le mï¿½me ordre que celui du constructeur Utilisateur
 	 * 
 	 * @Return : Utilisateur via un constructeur de type List
 	 */
@@ -133,11 +131,11 @@ public interface ConnexionForm {
 				String lastEntry = request.getParameter(entries.get(entries.size() - 1)).trim();
 
 				if (!(request.getParameter(entry).trim().equals(lastEntry))) {
-					request.setAttribute("erreurConfirm", "Le mot de passe et sa confirmation sont différents");
+					request.setAttribute("erreurConfirm", "Le mot de passe et sa confirmation sont diffï¿½rents");
 					entries.remove(entries.size() - 1);
 					break;
 				}
-				// vérifie si une érreur est levé, si oui break
+				// vï¿½rifie si une ï¿½rreur est levï¿½, si oui break
 				erreur = "erreur" + entry.substring(0, 1).toUpperCase() + entry.substring(1);
 				request.setAttribute(erreur, regStringValeur(request.getParameter(entry), entry));
 				if(request.getAttribute("erreurMdp") != null) {
@@ -177,12 +175,11 @@ public interface ConnexionForm {
 	
 
 	/*
-	 * @Author : Valentin
 	 * @References : https://www.baeldung.com/sha-256-hashing-java
 	 * 
-	 * @Param : String, Mot de passe entré par l'utilisateur
+	 * @Param : String, Mot de passe entrï¿½ par l'utilisateur
 	 * 
-	 * @Return : String, Mot de passe hashé
+	 * @Return : String, Mot de passe hashï¿½
 	 */
 	public static String hashMdp(String entryMdp) {
 

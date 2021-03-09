@@ -21,9 +21,8 @@ public class AfficherProfilServlet extends HttpServlet {
 
 	
 	/*
-	 * @Author : Valentin
 	 * 
-	 * Vérifie si le parametre pseudo désigne un utilisateur existant
+	 * Vï¿½rifie si le parametre pseudo dï¿½signe un utilisateur existant
 	 * Si il n'existe pas, afficher la page de son profil
 	 * Sinon page 404 
 	 */

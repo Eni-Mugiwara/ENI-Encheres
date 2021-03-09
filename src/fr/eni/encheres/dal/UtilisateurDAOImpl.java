@@ -13,7 +13,7 @@ import fr.eni.encheres.bo.Utilisateur;
 public class UtilisateurDAOImpl implements UtilisateurDAO {
 
 	/**
-	 * Attributs de classe des requêtes sql
+	 * Attributs de classe des requï¿½tes sql
 	 */
 	private static final String SQL_SELECT_ALL_USER = "SELECT no_utilisateur, pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur FROM utilisateurs";
 	private static final String SQL_INSERT_USER = "INSERT INTO utilisateurs (pseudo, nom, prenom, email,"
@@ -30,7 +30,7 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	
 	
 	/**
-	 * méthode pour récupérer tous les utilisateurs en base de donnée
+	 * mï¿½thode pour rï¿½cupï¿½rer tous les utilisateurs en base de donnï¿½e
 	 */
 	public List<Utilisateur> findAllUtilisateur() throws DALException {
 		List<Utilisateur> listeUtilisateur = null;
@@ -59,11 +59,10 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	}
 
 	/*
-	 * @auhtor : Valentin
 	 * 
 	 * @param : String pseudo
 	 * 
-	 * Sélectionne un utilisateur
+	 * Sï¿½lectionne un utilisateur
 	 */
 	public Utilisateur selectByPseudo(String pseudo) throws DALException {
 		ResultSet rs = null;
@@ -85,13 +84,12 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 			}
 		} catch (SQLException e) {
 			throw new DALException(
-					"Erreur lors de l'éxécution de la méthode SelectById de la classe UtilisateurDAOImpl", e);
+					"Erreur lors de l'ï¿½xï¿½cution de la mï¿½thode SelectById de la classe UtilisateurDAOImpl", e);
 		}
 		return util;
 	}
 
 	/*
-	 * @auhtor : Valentin
 	 * 
 	 * @param : Utilisateur
 	 * 
@@ -129,11 +127,10 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	}
 	
 	/*
-	 * @auhtor : Valentin
 	 * 
 	 * @param : Utilisateur
 	 * 
-	 * Mise à jour de l'utilisateur via page de profil
+	 * Mise ï¿½ jour de l'utilisateur via page de profil
 	 */
 	public void updateById(Utilisateur user) throws DALException{
 		try (Connection conn = ConnectionProvider.getConnection()) {
@@ -155,16 +152,15 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 		} catch (SQLException e) {
 			// TODO Utiliser un log a la place
 			e.printStackTrace();
-			throw new DALException("Erreur lors de la mise à jour", e);
+			throw new DALException("Erreur lors de la mise ï¿½ jour", e);
 		}
 	}
 	
 	/*
-	 * @auhtor : Valentin
 	 * 
 	 * @param : id de l'utilisateur
 	 * 
-	 * Suppression des données de l'utilisateur via son id
+	 * Suppression des donnï¿½es de l'utilisateur via son id
 	 */
 	public void deleteById(int id)throws DALException{
 		try (Connection conn = ConnectionProvider.getConnection()) {
@@ -181,7 +177,6 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	}
 
 	/*
-	 * @auhtor : Samy-Lee
 	 * 
 	 * @param : id
 	 * 
@@ -208,7 +203,7 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 			}
 		} catch (SQLException e) {
 			throw new DALException(
-					"Erreur lors de l'éxécution de la méthode SelectById de la classe UtilisateurDAOImpl", e);
+					"Erreur lors de l'ï¿½xï¿½cution de la mï¿½thode SelectById de la classe UtilisateurDAOImpl", e);
 		}
 		return util;
 

@@ -1,6 +1,7 @@
 package fr.eni.encheres.ihm;
 
 import java.io.IOException;
+
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -36,10 +37,10 @@ public class ConnexionServlet extends HttpServlet {
 		String motDePasse = request.getParameter("motDePasse");
 		String id = request.getParameter("id");
 		
-		//reset à zéro si pas de session ouverte
+		//reset ï¿½ zï¿½ro si pas de session ouverte
 		if( pseudo == null) pseudo = "";
 		if( motDePasse == null) motDePasse = "";
-		//contrôle de la session 
+		//contrï¿½le de la session 
 		HttpSession session = request.getSession( true );
 		session.setAttribute("pseudo", pseudo);
 		session.setAttribute("motDePasse", motDePasse);
@@ -52,10 +53,10 @@ public class ConnexionServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			//création de la session
+			//crï¿½ation de la session
 			HttpSession session = request.getSession();
 		try {
-			//récupération de la liste des utilisateurs en bdd et de la saisie des inputs sur la page de connexion
+			//rï¿½cupï¿½ration de la liste des utilisateurs en bdd et de la saisie des inputs sur la page de connexion
 			List<Utilisateur> listeDutilisateur = mgr.getAllUtilisateur();
 			
 			String erreur = "t'as fait une faute d'orthographe";
@@ -63,10 +64,10 @@ public class ConnexionServlet extends HttpServlet {
 			String mdp = request.getParameter("mdp").trim();
 
 			
-			//vérification du mot de passe
+			//vï¿½rification du mot de passe
 			ConnexionForm.regStringValeur( mdp, "mdp");
 			
-			//vérif de la saisie utilisateur si pseudo est un mail ou un pseudo
+			//vï¿½rif de la saisie utilisateur si pseudo est un mail ou un pseudo
 			//e t filtre la saisie pour la stocker dans le pseudo
 			if (pseudo.matches(EMAIL_PATTERN)) {
 			String email = null;
@@ -75,7 +76,7 @@ public class ConnexionServlet extends HttpServlet {
 		
 			String  mdp1 = ConnexionForm.hashMdp(mdp);
 
-			//filtre de recherche si pseudo ou si email existe dans la bdd et si ceux ci-correspondent au mot de passe enregistré en bdd
+			//filtre de recherche si pseudo ou si email existe dans la bdd et si ceux ci-correspondent au mot de passe enregistrï¿½ en bdd
 			Utilisateur utilisateurConfirmeBDD = 
 				listeDutilisateur.stream().filter(
 			u -> (u.getPseudo().contains(pseudo) || u.getEmail().contains(pseudo))  && u.getMotDePasse().contains(mdp1)) 
