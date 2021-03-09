@@ -2,11 +2,8 @@ package fr.eni.encheres.bll;
 
 import java.sql.SQLException;
 import java.util.List;
-
 import fr.eni.encheres.bo.Article;
 import fr.eni.encheres.bo.Categorie;
-import fr.eni.encheres.bo.Retrait;
-import fr.eni.encheres.bo.Utilisateur;
 import fr.eni.encheres.dal.ArticleDAO;
 import fr.eni.encheres.dal.DALException;
 import fr.eni.encheres.dal.DAOFactory;
@@ -20,10 +17,10 @@ public class ArticleManager {
 	}
 
 	/**
-	 * @author Samy-Lee
+	 * @author SoGutta
 	 * @return List<Article>
 	 * @throws BLLException
-	 * Selectionne tout les articles avec Utilisateur et catégorie
+	 * Selectionne tout les articles avec Utilisateur et catÃ©gorie
 	 */
 	public List<Article> SelectAllArticlesAvecUtilisateurEtCategorie(int utilisateurId, int categorieId) throws BLLException {
 		List<Article> listeArticle = null;
@@ -37,15 +34,15 @@ public class ArticleManager {
 
 	}
 	/**
-	 * méthode d'insertion d'article en bdd
-	 * @author tjouvin
+	 * mÃ©thode d'insertion d'article en bdd
+	 * @author SoGutta
 	 * @throws BLLException 
 	 * @throws SQLException 
 	 * @return article
 	 */
 	public void  insertArticle ( Article article, int utilisateurId, int categorieId) throws BLLException, SQLException {
 		try {
-			System.out.println("là ! bll" + article);
+			System.out.println("lï¿½ ! bll" + article);
 			 articleDAO.insertArticle ( article, utilisateurId, categorieId );
 
 		} catch (DALException e) {
@@ -54,10 +51,10 @@ public class ArticleManager {
 		}
 	}
 	/**
-	 * @author Samy-Lee
+	 * @author SoGutta
 	 * @return List<Categorie>
 	 * @throws BLLException
-	 * Selectionne toutes les catégories
+	 * Selectionne toutes les catÃ©gories
 	 */
 	public List<Categorie> SelectAllCategories() throws BLLException {
 		
@@ -75,10 +72,10 @@ public class ArticleManager {
 	
 
 	/**
-	 * @author Samy-Lee
+	 * @author SoGutta
 	 * @return List<Article>
 	 * @throws BLLException
-	 * Selectionne tout les articles avec Utilisateur et catégorie
+	 * Selectionne tout les articles avec Utilisateur et catÃ©gories
 	 */
 	public List<Article> SelectAllArticles() throws BLLException {
 		List<Article> listeArticle = null;

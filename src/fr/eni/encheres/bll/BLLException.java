@@ -1,5 +1,6 @@
 package fr.eni.encheres.bll;
 
+@SuppressWarnings("serial")
 public class BLLException extends Exception {
 
 	public BLLException() {
