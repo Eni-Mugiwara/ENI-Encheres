@@ -1,36 +1,37 @@
 package fr.eni.encheres.bo;
 
-
-import java.util.HashMap;
-import java.util.Map;
+import java.time.LocalDate;
 
 public class Encheres {
-	private static final long serialVersionUID = 1L;
-	
-	private int no_utilisateur;
-	private String date_enchere;
-	private int montant_enchere;
-	private int no_article;
-	
-	public Encheres(int no_utilisateur, String date_enchere, int montant_enchere, int no_article) {
+
+	public Encheres(LocalDate dateEnchere, int montantEnchere) {
 		super();
-		this.no_utilisateur = no_utilisateur;
-		this.date_enchere = date_enchere;
-		this.montant_enchere = montant_enchere;
-		this.no_article = no_article;
+		this.dateEnchere = dateEnchere;
+		this.montantEnchere = montantEnchere;
 	}
 
-	public Map<String, Object> getArgMap() {
-		Map<String, Object> argMap = new HashMap<>();
-		argMap.put("no_utilisateur", no_utilisateur);
-		argMap.put("date_enchere", date_enchere);
-		argMap.put("montant_enchere", montant_enchere);
-		argMap.put("no_article", no_article);
-		return argMap;
+	private LocalDate dateEnchere;
+	private int montantEnchere;
+
+	public LocalDate getDateEnchere() {
+		return dateEnchere;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public void setDateEnchere(LocalDate dateEnchere) {
+		this.dateEnchere = dateEnchere;
 	}
-	
+
+	public int getMontantEnchere() {
+		return montantEnchere;
+	}
+
+	public void setMontantEnchere(int montantEnchere) {
+		this.montantEnchere = montantEnchere;
+	}
+
+	@Override
+	public String toString() {
+		return "Encheres [dateEnchere=" + dateEnchere + ", montantEnchere=" + montantEnchere + "]";
+	}
+
 }

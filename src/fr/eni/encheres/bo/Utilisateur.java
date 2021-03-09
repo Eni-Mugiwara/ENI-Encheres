@@ -1,12 +1,10 @@
 package fr.eni.encheres.bo;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 public class Utilisateur {
-	private static final long serialVersionUID = 1L;
-	
-	private int no_utilisateur;
+
+	private int id;
 	private String pseudo;
 	private String nom;
 	private String prenom;
@@ -17,11 +15,12 @@ public class Utilisateur {
 	private String ville;
 	private String motDePasse;
 	private int credit;
-	private int administrateur;
-	
-	public Utilisateur(int no_utilisateur, String pseudo, String nom, String prenom, String email, String telephone, String rue, String codePostal, String ville, String motDePasse, int credit, int administrateur) {
+	private Boolean administrateur;
+
+	public Utilisateur(int id, String pseudo, String nom, String prenom, String email, String telephone, String rue,
+			String codePostal, String ville, String motDePasse, int credit, Boolean administrateur) {
 		super();
-		this.setNo_utilisateur(no_utilisateur);
+		this.id = id;
 		this.pseudo = pseudo;
 		this.nom = nom;
 		this.prenom = prenom;
@@ -35,28 +34,89 @@ public class Utilisateur {
 		this.administrateur = administrateur;
 	}
 
-	public Map<String, Object> getArgMap() {
-		Map<String, Object> argMap = new HashMap<>();
-		argMap.put("pseudo", pseudo);
-		argMap.put("nom", nom);
-		argMap.put("prenom", prenom);
-		argMap.put("email", email);
-		argMap.put("telephone", telephone);
-		argMap.put("rue", rue);
-		argMap.put("codePostal", codePostal);
-		argMap.put("ville", ville);
-		argMap.put("motDePasse", motDePasse);
-		argMap.put("credit", credit);
-		argMap.put("administrateur", administrateur);
-		return argMap;
+	public Utilisateur(String pseudo, String nom, String prenom, String email, String telephone, String rue,
+			String codePostal, String ville, String motDePasse) {
+		super();
+		this.pseudo = pseudo;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.motDePasse = motDePasse;
+
 	}
 
-	public int getNo_utilisateur() {
-		return no_utilisateur;
+	public Utilisateur(String pseudo, String nom, String prenom, String email, String telephone, String rue,
+			String codePostal, String ville, String motDePasse, int credit) {
+		super();
+		this.pseudo = pseudo;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.motDePasse = motDePasse;
+		this.credit = credit;
 	}
 
-	public void setNo_utilisateur(int no_utilisateur) {
-		this.no_utilisateur = no_utilisateur;
+	public Utilisateur(int id, String pseudo, String nom, String prenom, String email, String telephone, String rue,
+			String codePostal, String ville, String motDePasse, int credit) {
+		super();
+		this.id = id;
+		this.pseudo = pseudo;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.motDePasse = motDePasse;
+		this.credit = credit;
+	}
+
+	public Utilisateur(int id, String pseudo, String nom, String prenom, String email, String telephone, String rue,
+			String codePostal, String ville, String motDePasse) {
+		super();
+		this.id = id;
+		this.pseudo = pseudo;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.motDePasse = motDePasse;
+	}
+	
+
+	public Utilisateur(List<String> list) {
+		this.id = Integer.valueOf(list.get(0));
+		this.pseudo = list.get(1);
+		this.nom = list.get(2);
+		this.prenom = list.get(3);
+		this.email = list.get(4);
+		this.telephone = list.get(5);
+		this.rue = list.get(6);
+		this.codePostal = list.get(7);
+		this.ville = list.get(8);
+		this.motDePasse = list.get(9);
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getPseudo() {
@@ -139,16 +199,19 @@ public class Utilisateur {
 		this.credit = credit;
 	}
 
-	public int getAdministrateur() {
+	public Boolean getAdministrateur() {
 		return administrateur;
 	}
 
-	public void setAdministrateur(int administrateur) {
+	public void setAdministrateur(Boolean administrateur) {
 		this.administrateur = administrateur;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	@Override
+	public String toString() {
+		return "Utilisateur [id=" + id + ", pseudo=" + pseudo + ", nom=" + nom + ", prenom=" + prenom + ", email="
+				+ email + ", telephone=" + telephone + ", rue=" + rue + ", codePostal=" + codePostal + ", motDePasse="
+				+ motDePasse + ", credit=" + credit + ", administrateur=" + administrateur + "]";
 	}
-	
+
 }

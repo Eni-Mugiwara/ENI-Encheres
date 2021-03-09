@@ -1,33 +1,35 @@
 package fr.eni.encheres.bll;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BLLException extends Exception {
-    private static final long serialVersionUID = 1L;
-    private List<Integer> listErrorCodes;
 
-    public BLLException() {
-        super();
-        this.listErrorCodes=new ArrayList<>();
-    }
+	public BLLException() {
+		// TODO Auto-generated constructor stub
+	}
 
-    public void addError(int code)
-    {
-        if(!this.listErrorCodes.contains(code))
-        {
-            this.listErrorCodes.add(code);
-        }
-    }
+	public BLLException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
 
-    public boolean hasErrors()
-    {
-        return this.listErrorCodes.size()>0;
-    }
+	public BLLException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
 
-    public List<Integer> getListErrorCodes()
-    {
-        return this.listErrorCodes;
-    }
+	public BLLException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public BLLException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String getMessage() {
+		// TODO Auto-generated method stub
+		return super.getMessage();
+	}
 
 }

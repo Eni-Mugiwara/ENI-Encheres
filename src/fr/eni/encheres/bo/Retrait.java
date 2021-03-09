@@ -1,35 +1,45 @@
 package fr.eni.encheres.bo;
 
-import java.util.HashMap;
-import java.util.Map;
+public class Retrait {
 
-public class Retrait  {
-	private static final long serialVersionUID = 1L;
-	
-	private int no_article;
-	private String code_postal;	
-	private String ville;
 	private String rue;
+	private String codePostal;
+	private String ville;
 
-	public Retrait(int no_article, String code_postal, String ville, String rue) {
+	public Retrait(String rue, String codePostal, String ville) {
 		super();
-		this.no_article = no_article;
-		this.code_postal = code_postal;
+		this.rue = rue;
+		this.codePostal = codePostal;
 		this.ville = ville;
+	}
+
+	public String getRue() {
+		return rue;
+	}
+
+	public void setRue(String rue) {
 		this.rue = rue;
 	}
 
-	public Map<String, Object> getArgMap() {
-		Map<String, Object> argMap = new HashMap<>();
-		argMap.put("code_postal", code_postal);
-		argMap.put("ville", ville);
-		argMap.put("rue", rue);
-		argMap.put("no_article", no_article);
-		return argMap;
+	public String getCodePostal() {
+		return codePostal;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
 	}
-	
+
+	public String getVille() {
+		return ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+	@Override
+	public String toString() {
+		return "Retrait [rue=" + rue + ", codePostal=" + codePostal + ", ville=" + ville + "]";
+	}
+
 }
