@@ -1,45 +1,40 @@
 package fr.eni.encheres.dal;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class DALException extends Exception {
-    private static final long serialVersionUID = 1L;
-    private List<Integer> listErrorCodes;
-    
-    public DALException() {
-        super();
-        this.listErrorCodes=new ArrayList<>();
-    }
 
-    /**
-     * Add an error code to the instance
-     * @param code integer a code referenced in ErrorCodesDAL.java
-     */
-    public void addError(int code)
-    {
-        if(!this.listErrorCodes.contains(code))
-        {
-            this.listErrorCodes.add(code);
-        }
-    }
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * Returns true if the instance contains error codes and false if not
-     * @return boolean
-     */
-    public boolean hasErrors()
-    {
-        return this.listErrorCodes.size()>0;
-    }
+	public DALException() {
+		// TODO Auto-generated constructor stub
+	}
 
-    /**
-     * Returns the list of the error codes stored in the instance
-     * @return List
-     */
-    public List<Integer> getListErrorCodes()
-    {
-        return this.listErrorCodes;
-    }
+	public DALException(String arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String getMessage() {
+		// TODO Auto-generated method stub
+		return super.getMessage();
+	}
+
+	public DALException(Throwable arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+
+	public DALException(String arg0, Throwable arg1) {
+		super(arg0, arg1);
+		// TODO Auto-generated constructor stub
+	}
+
+	public DALException(String arg0, Throwable arg1, boolean arg2, boolean arg3) {
+		super(arg0, arg1, arg2, arg3);
+		// TODO Auto-generated constructor stub
+	}
 
 }
