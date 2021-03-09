@@ -1,6 +1,7 @@
 package fr.eni.encheres.dal;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,11 +11,19 @@ import java.util.ArrayList;
 import java.util.List;
 import fr.eni.encheres.bo.Article;
 import fr.eni.encheres.bo.Categorie;
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 
 public class ArticleDAOImpl implements ArticleDAO {
 
 	/**
+<<<<<<< HEAD
 	 * Attributs de classe des requetes sql
+=======
+	 * Attributs de classe des requ�tes sql
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 
 	private static final String SQL_SELECT_ALL_ARTICLES = "SELECT no_article, nom_article, description, date_debut_encheres,"
@@ -45,6 +54,12 @@ public class ArticleDAOImpl implements ArticleDAO {
 //	private static final String SQL_FILTRE_CATEGORIE_AND = " AND A.no_categorie = ?";
 	
 	 /**
+<<<<<<< HEAD
+=======
+
+	 * @return List<Article>
+	 * @throws DALException
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * Selectionne les articles avec les param�tres utilisateurId & categorieId
 	 */
 	
@@ -94,7 +109,13 @@ public class ArticleDAOImpl implements ArticleDAO {
 		return listArticles;
 	}
 	/**
+<<<<<<< HEAD
 	 * methode d'insertion d'un objet en bdd
+=======
+	 * m�thode d'insertion d'un objet en bdd
+	 * @throws SQLException 
+	 * @throws DALException 
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	
 	public void insertArticle (Article article, int utilisateurId, int categorieId ) throws SQLException, DALException {
@@ -146,6 +167,12 @@ public class ArticleDAOImpl implements ArticleDAO {
 
 	
 	/**
+<<<<<<< HEAD
+=======
+
+	 * @return List<Categorie>
+	 * @throws BLLException
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * Selectionne toutes les cat�gories
 	 */
 	
@@ -172,6 +199,12 @@ public class ArticleDAOImpl implements ArticleDAO {
 	
 	/**
 	 * Selectionne tout les articles
+<<<<<<< HEAD
+=======
+
+	 * @return List<Article>
+	 * @throws DALException
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	
 	public List<Article> SelectAllArticles() throws DALException{

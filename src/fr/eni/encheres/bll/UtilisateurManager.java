@@ -38,13 +38,20 @@ public class UtilisateurManager {
 	}
 
 	/**
-	 * @author SoGutta
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @param id
 	 * @return Utilisateur
 	 * @throws BLLException
 	 * 
+<<<<<<< HEAD
+	 *                      Selectionne un utilisateur par son ID � l'aide du
+	 *                      manager
+=======
 	 *                      Selectionne un utilisateur par son ID à l'aide du
 	 *                     												 Manager
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	public Utilisateur selectById(int id) throws BLLException {
 		Utilisateur utilisateur = null;

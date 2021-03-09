@@ -17,10 +17,17 @@ public class ArticleManager {
 	}
 
 	/**
-	 * @author SoGutta
+<<<<<<< HEAD
+	
+=======
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @return List<Article>
 	 * @throws BLLException
+<<<<<<< HEAD
+	 * Selectionne tout les articles avec Utilisateur et cat�gorie
+=======
 	 * Selectionne tout les articles avec Utilisateur et catégorie
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	public List<Article> SelectAllArticlesAvecUtilisateurEtCategorie(int utilisateurId, int categorieId) throws BLLException {
 		List<Article> listeArticle = null;
@@ -34,8 +41,11 @@ public class ArticleManager {
 
 	}
 	/**
+<<<<<<< HEAD
+	 * m�thode d'insertion d'article en bdd
+=======
 	 * méthode d'insertion d'article en bdd
-	 * @author SoGutta
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @throws BLLException 
 	 * @throws SQLException 
 	 * @return article
@@ -51,10 +61,16 @@ public class ArticleManager {
 		}
 	}
 	/**
-	 * @author SoGutta
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @return List<Categorie>
 	 * @throws BLLException
+<<<<<<< HEAD
+	 * Selectionne toutes les cat�gories
+=======
 	 * Selectionne toutes les catégories
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	public List<Categorie> SelectAllCategories() throws BLLException {
 		
@@ -72,10 +88,16 @@ public class ArticleManager {
 	
 
 	/**
-	 * @author SoGutta
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @return List<Article>
 	 * @throws BLLException
+<<<<<<< HEAD
+	 * Selectionne tout les articles avec Utilisateur et cat�gorie
+=======
 	 * Selectionne tout les articles avec Utilisateur et catégories
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	public List<Article> SelectAllArticles() throws BLLException {
 		List<Article> listeArticle = null;

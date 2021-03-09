@@ -13,7 +13,11 @@ import fr.eni.encheres.bo.Utilisateur;
 public class UtilisateurDAOImpl implements UtilisateurDAO {
 
 	/**
+<<<<<<< HEAD
 	 * Attributs de classe des requetes sql
+=======
+	 * Attributs de classe des requ�tes sql
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	private static final String SQL_SELECT_ALL_USER = "SELECT no_utilisateur, pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur FROM utilisateurs";
 	private static final String SQL_INSERT_USER = "INSERT INTO utilisateurs (pseudo, nom, prenom, email,"
@@ -30,7 +34,11 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	
 	
 	/**
+<<<<<<< HEAD
 	 * methode pour recuperer tous les utilisateurs en base de donnee
+=======
+	 * m�thode pour r�cup�rer tous les utilisateurs en base de donn�e
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	public List<Utilisateur> findAllUtilisateur() throws DALException {
 		List<Utilisateur> listeUtilisateur = null;
@@ -58,8 +66,16 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 		return listeUtilisateur;
 	}
 
+<<<<<<< HEAD
 	//
 	 /* Selectionne un utilisateur
+=======
+	/*
+	 * 
+	 * @param : String pseudo
+	 * 
+	 * S�lectionne un utilisateur
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	
 	public Utilisateur selectByPseudo(String pseudo) throws DALException {
@@ -88,6 +104,12 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	}
 
 	/*
+<<<<<<< HEAD
+=======
+	 * 
+	 * @param : Utilisateur
+	 * 
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * Insertion en bdd de l'utilisateur via inscription
 	 */
 	
@@ -123,7 +145,14 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	}
 	
 	/*
+<<<<<<< HEAD
 	 * Mise a  jour de l'utilisateur via page de profil
+=======
+	 * 
+	 * @param : Utilisateur
+	 * 
+	 * Mise � jour de l'utilisateur via page de profil
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	
 	public void updateById(Utilisateur user) throws DALException{
@@ -151,7 +180,14 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	}
 	
 	/*
+<<<<<<< HEAD
 	 * Suppression des donnees de l'utilisateur via son id
+=======
+	 * 
+	 * @param : id de l'utilisateur
+	 * 
+	 * Suppression des donn�es de l'utilisateur via son id
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	public void deleteById(int id)throws DALException{
 		try (Connection conn = ConnectionProvider.getConnection()) {
@@ -168,6 +204,12 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 	}
 
 	/*
+<<<<<<< HEAD
+=======
+	 * 
+	 * @param : id
+	 * 
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * Selection en bdd de l'utilisateur par son id
 	 */
 	
