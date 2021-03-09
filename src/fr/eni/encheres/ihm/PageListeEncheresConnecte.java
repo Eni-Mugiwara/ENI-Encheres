@@ -2,6 +2,7 @@ package fr.eni.encheres.ihm;
 
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -78,7 +79,7 @@ public class PageListeEncheresConnecte extends HttpServlet {
 //				// TODO Auto-generated catch block
 //				e1.printStackTrace();
 //			}
-//			// Vérifie CheckBox Gagne
+//			// Vï¿½rifie CheckBox Gagne
 //			if(enchereGagne != null) {
 //				filtres = true;
 //				
@@ -91,7 +92,7 @@ public class PageListeEncheresConnecte extends HttpServlet {
 //					e.printStackTrace();
 //				}
 //	
-//				// Si enchereOuverte est coché, pas besoin de demander enchereUtilisateur
+//				// Si enchereOuverte est cochï¿½, pas besoin de demander enchereUtilisateur
 //				if(enchereOuverte != null) {
 //					try {
 //						for (Article article : articleManager.selectAllByEtatVente(2)) {
@@ -107,7 +108,7 @@ public class PageListeEncheresConnecte extends HttpServlet {
 //				}	
 //			}
 //			
-//			// Vérifie CheckBox Utilisateur
+//			// Vï¿½rifie CheckBox Utilisateur
 //			if(enchereUtilisateur != null) {
 //				filtres = true;
 //				
