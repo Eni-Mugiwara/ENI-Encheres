@@ -1,8 +1,6 @@
 package fr.eni.encheres.bll;
 
-import java.sql.SQLException;
 import java.util.List;
-
 import fr.eni.encheres.bo.Utilisateur;
 import fr.eni.encheres.dal.DALException;
 import fr.eni.encheres.dal.DAOFactory;
@@ -13,7 +11,7 @@ public class UtilisateurManager {
 	private UtilisateurDAO utilisateurDAO;
 
 	/**
-	 * constructeur utilisateurManager
+	 * Constructeur utilisateurManager
 	 */
 	public UtilisateurManager() {
 		utilisateurDAO = DAOFactory.getUtilisateurDAO();
@@ -40,12 +38,21 @@ public class UtilisateurManager {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * @author SoGutta
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 * @param id
 	 * @return Utilisateur
 	 * @throws BLLException
 	 * 
+<<<<<<< HEAD
 	 *                      Selectionne un utilisateur par son ID � l'aide du
 	 *                      manager
+=======
+	 *                      Selectionne un utilisateur par son ID à l'aide du
+	 *                     												 Manager
+>>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 	 */
 	public Utilisateur selectById(int id) throws BLLException {
 		Utilisateur utilisateur = null;
