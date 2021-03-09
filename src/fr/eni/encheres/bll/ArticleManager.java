@@ -20,10 +20,10 @@ public class ArticleManager {
 	}
 
 	/**
-	 * @author Samy-Lee
+	
 	 * @return List<Article>
 	 * @throws BLLException
-	 * Selectionne tout les articles avec Utilisateur et catégorie
+	 * Selectionne tout les articles avec Utilisateur et catï¿½gorie
 	 */
 	public List<Article> SelectAllArticlesAvecUtilisateurEtCategorie(int utilisateurId, int categorieId) throws BLLException {
 		List<Article> listeArticle = null;
@@ -37,15 +37,14 @@ public class ArticleManager {
 
 	}
 	/**
-	 * méthode d'insertion d'article en bdd
-	 * @author tjouvin
+	 * mï¿½thode d'insertion d'article en bdd
 	 * @throws BLLException 
 	 * @throws SQLException 
 	 * @return article
 	 */
 	public void  insertArticle ( Article article, int utilisateurId, int categorieId) throws BLLException, SQLException {
 		try {
-			System.out.println("là ! bll" + article);
+			System.out.println("lï¿½ ! bll" + article);
 			 articleDAO.insertArticle ( article, utilisateurId, categorieId );
 
 		} catch (DALException e) {
@@ -54,10 +53,9 @@ public class ArticleManager {
 		}
 	}
 	/**
-	 * @author Samy-Lee
 	 * @return List<Categorie>
 	 * @throws BLLException
-	 * Selectionne toutes les catégories
+	 * Selectionne toutes les catï¿½gories
 	 */
 	public List<Categorie> SelectAllCategories() throws BLLException {
 		
@@ -75,10 +73,9 @@ public class ArticleManager {
 	
 
 	/**
-	 * @author Samy-Lee
 	 * @return List<Article>
 	 * @throws BLLException
-	 * Selectionne tout les articles avec Utilisateur et catégorie
+	 * Selectionne tout les articles avec Utilisateur et catï¿½gorie
 	 */
 	public List<Article> SelectAllArticles() throws BLLException {
 		List<Article> listeArticle = null;

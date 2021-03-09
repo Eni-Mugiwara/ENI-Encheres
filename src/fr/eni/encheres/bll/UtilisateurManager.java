@@ -40,12 +40,11 @@ public class UtilisateurManager {
 	}
 
 	/**
-	 * @author Samy-Lee
 	 * @param id
 	 * @return Utilisateur
 	 * @throws BLLException
 	 * 
-	 *                      Selectionne un utilisateur par son ID à l'aide du
+	 *                      Selectionne un utilisateur par son ID ï¿½ l'aide du
 	 *                      manager
 	 */
 	public Utilisateur selectById(int id) throws BLLException {
