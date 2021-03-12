@@ -36,19 +36,10 @@ public class ConnexionServlet extends HttpServlet {
 		String pseudo = request.getParameter("pseudo");
 		String motDePasse = request.getParameter("motDePasse");
 		String id = request.getParameter("id");
-		
-<<<<<<< HEAD
-		//reset a zero si il n'y a pas de sessions ouvertes
-=======
-		//reset � z�ro si pas de session ouverte
->>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
+
 		if( pseudo == null) pseudo = "";
 		if( motDePasse == null) motDePasse = "";
-<<<<<<< HEAD
-		//controle de la session 
-=======
-		//contr�le de la session 
->>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
+
 		HttpSession session = request.getSession( true );
 		session.setAttribute("pseudo", pseudo);
 		session.setAttribute("motDePasse", motDePasse);
@@ -61,39 +52,19 @@ public class ConnexionServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-<<<<<<< HEAD
-			//creation de la session
-=======
-			//cr�ation de la session
->>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
+
 			HttpSession session = request.getSession();
 		try {
-<<<<<<< HEAD
-			//recuperation de la liste des utilisateurs en bdd et de la saisie des inputs sur la page de connexion
-=======
-			//r�cup�ration de la liste des utilisateurs en bdd et de la saisie des inputs sur la page de connexion
->>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
+
 			List<Utilisateur> listeDutilisateur = mgr.getAllUtilisateur();
 			
 			String erreur = "Tu as fait une faute d'orthographe";
 			String pseudo = ConnexionForm.validateInput(request.getParameter("pseudo").trim(), erreur ) ;
 			String mdp = request.getParameter("mdp").trim();
 
-			
-<<<<<<< HEAD
-			//verification du mot de passe
-=======
-			//v�rification du mot de passe
->>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
+
 			ConnexionForm.regStringValeur( mdp, "mdp");
 			
-<<<<<<< HEAD
-			//verif de la saisie utilisateur si pseudo est un mail ou un pseudo
-			// et filtrer la saisie pour la stocker dans le pseudo
-=======
-			//v�rif de la saisie utilisateur si pseudo est un mail ou un pseudo
-			//e t filtre la saisie pour la stocker dans le pseudo
->>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
 			if (pseudo.matches(EMAIL_PATTERN)) {
 			String email = null;
 			 email = (String) request.getParameter("pseudo");
@@ -101,11 +72,7 @@ public class ConnexionServlet extends HttpServlet {
 		
 			String  mdp1 = ConnexionForm.hashMdp(mdp);
 
-<<<<<<< HEAD
-			//filtre de recherche si pseudo ou si email existe dans la bdd et si ceux ci-correspondent au mot de passe enregistrer  en bdd
-=======
-			//filtre de recherche si pseudo ou si email existe dans la bdd et si ceux ci-correspondent au mot de passe enregistr� en bdd
->>>>>>> branch 'master' of https://github.com/Eni-Mugiwara/ENI-Encheres.git
+
 			Utilisateur utilisateurConfirmeBDD = 
 				listeDutilisateur.stream().filter(
 			u -> (u.getPseudo().contains(pseudo) || u.getEmail().contains(pseudo))  && u.getMotDePasse().contains(mdp1)) 

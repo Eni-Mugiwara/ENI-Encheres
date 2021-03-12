@@ -20,7 +20,7 @@
 <body>
 	
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="Accueil">ENI-Enchere</a>
+		<a class="navbar-brand" href="Accueil">ENI-Enchere by "Les objets sont nos amis"</a>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item"><a class="nav-link" href="Connexion">S'inscrire
 					- Se connecter</a></li>
