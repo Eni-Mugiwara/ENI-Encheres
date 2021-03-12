@@ -9,149 +9,152 @@
   </session-config>
   
 <!-- JSP Mapping -->
-    <servlet>
-  	<servlet-name>Accueil</servlet-name>
-  	<jsp-file>/WEB-INF/pages/Accueil.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>Accueil</servlet-name>
-  <url-pattern>/pages/Accueil</url-pattern>
-  </servlet-mapping>
+<!--     <servlet> -->
+<!--   	<servlet-name>Accueil</servlet-name> -->
+<!--   	<jsp-file>/WEB-INF/pages/Accueil.jsp</jsp-file> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   <servlet-name>Accueil</servlet-name> -->
+<!--   <url-pattern>/pages/Accueil</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-  	<servlet-name>Connexionr</servlet-name>
-  	<jsp-file>/WEB-INF/pages/Connexion.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>JSPConnexionUtilisateur</servlet-name>
-  	<url-pattern>/pages/Connexion</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--   	<servlet-name>Connexionr</servlet-name> -->
+<!--   	<jsp-file>/WEB-INF/pages/Connexion.jsp</jsp-file> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>JSPConnexionUtilisateur</servlet-name> -->
+<!--   	<url-pattern>/pages/Connexion</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-      <servlet>
-  	<servlet-name>CreerCompte</servlet-name>
-  	<jsp-file>/WEB-INF/pages/CreerCompte.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>CreerCompte</servlet-name>
-  <url-pattern>/pages/CreerCompte</url-pattern>
-  </servlet-mapping>
+<!--       <servlet> -->
+<!--   	<servlet-name>CreerCompte</servlet-name> -->
+<!--   	<jsp-file>/WEB-INF/pages/CreerCompte.jsp</jsp-file> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   <servlet-name>CreerCompte</servlet-name> -->
+<!--   <url-pattern>/pages/CreerCompte</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-  	<servlet-name>DetailEnchere</servlet-name>
-  	<jsp-file>/WEB-INF/pages/DetailEnchere.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>DetailEnchere</servlet-name>
-  	<url-pattern>/pages/DetailEnchere</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--   	<servlet-name>DetailEnchere</servlet-name> -->
+<!--   	<jsp-file>/WEB-INF/pages/DetailEnchere.jsp</jsp-file> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>DetailEnchere</servlet-name> -->
+<!--   	<url-pattern>/pages/DetailEnchere</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-  	<servlet-name>ListeEncheresConnecte</servlet-name>
-  	<jsp-file>/WEB-INF/pages/ListeEncheresConnecte.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>ListeEncheresConnecte</servlet-name>
-  <url-pattern>/pages/ListeEncheresConnecte</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--   	<servlet-name>ListeEncheresConnecte</servlet-name> -->
+<!--   	<jsp-file>/WEB-INF/pages/ListeEncheresConnecte.jsp</jsp-file> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   <servlet-name>ListeEncheresConnecte</servlet-name> -->
+<!--   <url-pattern>/pages/ListeEncheresConnecte</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-  	<servlet-name>ModifierProfil</servlet-name>
-  	<jsp-file>/WEB-INF/pages/ModifierProfil.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ModifierProfil</servlet-name>
-  	<url-pattern>/pages/ModifierProfil</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--   	<servlet-name>ModifierProfil</servlet-name> -->
+<!--   	<jsp-file>/WEB-INF/pages/ModifierProfil.jsp</jsp-file> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>ModifierProfil</servlet-name> -->
+<!--   	<url-pattern>/pages/ModifierProfil</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-   <servlet>
-  	<servlet-name>Profil</servlet-name>
-  	<jsp-file>/WEB-INF/pages/Profil.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>Profil</servlet-name>
-  <url-pattern>/pages/Profil</url-pattern>
-  </servlet-mapping>
+<!--    <servlet> -->
+<!--   	<servlet-name>Profil</servlet-name> -->
+<!--   	<jsp-file>/WEB-INF/pages/Profil.jsp</jsp-file> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   <servlet-name>Profil</servlet-name> -->
+<!--   <url-pattern>/pages/Profil</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-  	<servlet-name>VenteArticle</servlet-name>
-  	<jsp-file>/WEB-INF/pages/VenteArticle.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>VenteArticle</servlet-name>
-  	<url-pattern>/pages/VenteArticle</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--   	<servlet-name>VenteArticle</servlet-name> -->
+<!--   	<jsp-file>/WEB-INF/pages/VenteArticle.jsp</jsp-file> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>VenteArticle</servlet-name> -->
+<!--   	<url-pattern>/pages/VenteArticle</url-pattern> -->
+<!--   </servlet-mapping> -->
   
   <!-- Servlet Mapping  -->
-  <servlet>
-        <servlet-name>AccueilServlet</servlet-name>
-        <servlet-class>fr.eni.encheres.ihm.AccueilServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>AccueilServlet</servlet-name>
-  	<url-pattern>/pages/Accueil</url-pattern>
-  </servlet-mapping>
   
-  <servlet>
-        <servlet-name>AfficherProfilServlet</servlet-name>
-        <servlet-class>fr.eni.encheres.ihm.AfficherProfilServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>AfficherProfilServlet</servlet-name>
-  	<url-pattern>/pages/Profil</url-pattern>
-  </servlet-mapping>
   
-  <servlet>
-        <servlet-name>ConnexionServlet</servlet-name>
-        <servlet-class>fr.eni.encheres.ihm.ConnexionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ConnexionServlet</servlet-name>
-  	<url-pattern>/pages/Connexion</url-pattern>
-  </servlet-mapping>
   
-   <servlet>
-        <servlet-name>CreationCompteServlet</servlet-name>
-        <servlet-class>fr.eni.encheres.ihm.CreationCompteServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>CreationCompteServlet</servlet-name>
-  	<url-pattern>/pages/CreerCompte</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--         <servlet-name>AccueilServlet</servlet-name> -->
+<!--         <servlet-class>fr.eni.encheres.ihm.AccueilServlet</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>AccueilServlet</servlet-name> -->
+<!--   	<url-pattern>/*</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-        <servlet-name>DetailEnchereServlet</servlet-name>
-        <servlet-class>fr.eni.encheres.ihm.DetailEnchereServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>DetailEnchereServlet</servlet-name>
-  	<url-pattern>/pages/DetailEnchere</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--         <servlet-name>AfficherProfilServlet</servlet-name> -->
+<!--         <servlet-class>fr.eni.encheres.ihm.AfficherProfilServlet</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>AfficherProfilServlet</servlet-name> -->
+<!--   	<url-pattern>/pages/Profil</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-        <servlet-name>MiseEnVenteServlet</servlet-name>
-        <servlet-class>fr.eni.encheres.ihm.MiseEnVenteServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>MiseEnVenteServlet</servlet-name>
-  	<url-pattern>/pages/VenteArticle</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--         <servlet-name>ConnexionServlet</servlet-name> -->
+<!--         <servlet-class>fr.eni.encheres.ihm.ConnexionServlet</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>ConnexionServlet</servlet-name> -->
+<!--   	<url-pattern>/pages/Connexion</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-   <servlet>
-        <servlet-name>ModifierProfilServlet</servlet-name>
-        <servlet-class>fr.eni.encheres.ihm.ModifierProfilServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ModifierProfilServlet</servlet-name>
-  	<url-pattern>/pages/ModifierProfil</url-pattern>
-  </servlet-mapping>
+<!--    <servlet> -->
+<!--         <servlet-name>CreationCompteServlet</servlet-name> -->
+<!--         <servlet-class>fr.eni.encheres.ihm.CreationCompteServlet</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>CreationCompteServlet</servlet-name> -->
+<!--   	<url-pattern>/pages/CreerCompte</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-        <servlet-name>PageListeEncheresConnecte</servlet-name>
-        <servlet-class>fr.eni.encheres.ihm.PageListeEncheresConnecte</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>PageListeEncheresConnecte</servlet-name>
-  	<url-pattern>/pages/ListeEncheresConnecte</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--         <servlet-name>DetailEnchereServlet</servlet-name> -->
+<!--         <servlet-class>fr.eni.encheres.ihm.DetailEnchereServlet</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>DetailEnchereServlet</servlet-name> -->
+<!--   	<url-pattern>/pages/DetailEnchere</url-pattern> -->
+<!--   </servlet-mapping> -->
+  
+<!--   <servlet> -->
+<!--         <servlet-name>MiseEnVenteServlet</servlet-name> -->
+<!--         <servlet-class>fr.eni.encheres.ihm.MiseEnVenteServlet</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>MiseEnVenteServlet</servlet-name> -->
+<!--   	<url-pattern>/pages/VenteArticle</url-pattern> -->
+<!--   </servlet-mapping> -->
+  
+<!--    <servlet> -->
+<!--         <servlet-name>ModifierProfilServlet</servlet-name> -->
+<!--         <servlet-class>fr.eni.encheres.ihm.ModifierProfilServlet</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>ModifierProfilServlet</servlet-name> -->
+<!--   	<url-pattern>/pages/ModifierProfil</url-pattern> -->
+<!--   </servlet-mapping> -->
+  
+<!--   <servlet> -->
+<!--         <servlet-name>PageListeEncheresConnecte</servlet-name> -->
+<!--         <servlet-class>fr.eni.encheres.ihm.PageListeEncheresConnecte</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>PageListeEncheresConnecte</servlet-name> -->
+<!--   	<url-pattern>/pages/ListeEncheresConnecte</url-pattern> -->
+<!--   </servlet-mapping> -->
   
 </web-app>
